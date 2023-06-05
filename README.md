@@ -4,7 +4,7 @@
 
 > The Vehicle Street Tow and Mechanic Service is a comprehensive solution designed to assist individuals and businesses with their vehicle towing and mechanical service needs. Our service aims to provide prompt, reliable, and efficient support for both roadside emergencies and scheduled maintenance requirements. This GitHub repository contains all the relevant information and resources for our service.
 
-![Project Demo](./https://screenrec.com/share/XkLYmbHhEv)
+[Project Demo](./https://screenrec.com/share/XkLYmbHhEv)
 
 ## Built With
 
