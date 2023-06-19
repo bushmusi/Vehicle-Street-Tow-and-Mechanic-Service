@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Address;
+use App\Models\Mechanic;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -56,6 +57,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'role' => 'required|in:Mechanic,Driver,Service-Provider,Admin',
             'address_id' => 'required_if:role,Mechanic|exists:addresses,id',
+            'phone_number' => ['required', 'string'],
         ]);
     }
 
@@ -74,6 +76,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'role' => $data['role'],
             'address_id' => $data['address_id'] ?? null,
+            'phone_number' => $data['phone_number'] ?? null,
 
         ]);
     

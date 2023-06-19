@@ -16,6 +16,7 @@
                     <th>Current Address</th>
                     <th>Status</th>
                     <th>Fixer</th>
+                    <th>Fixer Phone</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -29,6 +30,7 @@
                         <td>{{ $booking->address->subcity }} - {{ $booking->address->woreda }}</td>
                         <td>{{ $booking->status ? 'Completed' : 'Pending' }}</td>
                         <td>{{ $booking->fixer ? $booking->fixer->name : 'N/A' }}</td>
+                        <td>{{ $booking->fixer ? $booking->fixer->phone_number : 'N/A' }}</td>
                         <td>
                             @if (!$booking->status)
                             <form action="{{ route('bookings.update-status', $booking) }}" method="POST">

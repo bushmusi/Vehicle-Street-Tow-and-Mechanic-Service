@@ -16,6 +16,7 @@
                     <th>Current Address</th>
                     <th>Status</th>
                     <th>Fixer</th>
+                    <th>Fixer Phone</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,7 @@
                         <td>{{ $booking->address->subcity }} - {{ $booking->address->woreda }}</td>
                         <td>{{ $booking->status ? 'Completed' : 'Pending' }}</td>
                         <td>{{ $booking->fixer ? $booking->fixer->name : 'N/A' }}</td>
+                        <td>{{ $booking->fixer ? $booking->fixer->phone_number : 'N/A' }}</td>
                     </tr>
                 @endforeach
             </tbody>

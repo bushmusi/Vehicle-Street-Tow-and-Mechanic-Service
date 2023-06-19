@@ -17,16 +17,22 @@
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-- Node v.18
+<!-- list of pre requists with thier link -->
+- [Node](https://nodejs.org/en/download/)
+- [PHP 8](https://www.php.net/downloads.php)
+- [Laravel 9](https://laravel.com/docs/9.x/installation)
+- [Composer](https://getcomposer.org/download/)
+- [Mailtrap](https://mailtrap.io/)
+<!-- 
+- [Node]()
 - PHP 8
 - Laravel 9
 - Composer 
-- Mailtip
+- Mailtip -->
 
 ### Setup
 
-1. `git clone git@github.com:bushmusi/Vehicle-Street-Tow-and-Mechanic-Service.git`
+1. `git clone git@github.com:bushmusi/Vehicle-Street-Tow-and-Mechanic-Service.git && cd Vehicle-Street-Tow-and-Mechanic-Service.git`
 2. `composer install`
 3. `npm install` 
 4. `php artisan serve`

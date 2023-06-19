@@ -81,12 +81,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="address"
+                            <label for="address_id"
                                 class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
 
                             <div class="col-md-6">
-                                <select id="address" class="form-control @error('address') is-invalid @enderror"
-                                    name="address" required>
+                                <select id="address_id" class="form-control @error('address_id') is-invalid @enderror"
+                                    name="address_id" required>
                                     @foreach ($addresses as $address)
                                         <option value="{{ $address->id }}"
                                             {{ old('address') == $address->id ? 'selected' : '' }}>
@@ -94,7 +94,21 @@
                                     @endforeach
                                 </select>
 
-                                @error('address')
+                                @error('address_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="phone_number" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
+
+                                @error('phone_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
